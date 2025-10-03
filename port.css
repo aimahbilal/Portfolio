@@ -1,0 +1,317 @@
+/* 🌐 General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🌐 Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f6fb;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 📌 Reusable */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  color: #777;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #6c63ff;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #ff6ec7;
+  transform: translateY(-3px);
+}
+
+/* 🌐 Navigation */
+.navbar {
+  background: #333;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ff6ec7;
+}
+
+/* 🎯 Hero */
+.hero {
+  background: linear-gradient(120deg, #6c63ff, #ff6ec7);
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero .highlight {
+  color: yellow;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* 👤 About */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.profile-img {
+  width: 180px;
+  border-radius: 50%;
+  border: 4px solid #6c63ff;
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+}
+
+.about-text {
+  max-width: 500px;
+  font-size: 1rem;
+  color: #444;
+}
+/* 🎓 Education */
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+.edu-card {
+  background: white;
+  color: darkmagenta;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideIn 0.8s ease forwards;
+}
+.edu-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 🛠 Skills */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.skill {
+  background: #9f5bf2;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  animation: fadeSlideIn 0.8s ease forwards;
+}
+.skill:hover {
+  background: #ff6ec7;
+  transform: scale(1.1);
+}
+
+/* 💼 Experience */
+.exp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+.exp-card {
+  background: white;
+  color: darkmagenta;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideIn 0.8s ease forwards;
+}
+.exp-card:hover {
+  transform: translateY(-5px);
+}
+.exp-card ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  text-align: left;
+}
+.exp-card li {
+  margin-bottom: 6px;
+  color: #555;
+}
+
+/* 💻 Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.project-card h3 {
+  margin-bottom: 15px;
+  color: #a311a3;
+}
+
+/* 📩 Contact */
+#contact a {
+  color: #201b7e;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#contact a:hover {
+  color: #ff6ec7;
+  text-decoration: underline;
+}
+
+/* ⚡ Footer */
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+}
+/* ✨ Animations */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 👇 Fade + Slide for Hero Elements */
+.hero h1 {
+  opacity: 0;
+  animation: fadeSlideIn 1s ease forwards;
+}
+
+.hero p {
+  opacity: 0;
+  animation: fadeSlideIn 1s ease forwards 0.8s; /* delay so it comes after h1 */
+}
+
+.hero .btn {
+  opacity: 0;
+  animation: fadeSlideIn 1s ease forwards 1.6s;
+}
+
+/* 💻 Project Cards Staggered Animation */
+.project-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideIn 0.8s ease forwards;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.3s; }
+.project-card:nth-child(2) { animation-delay: 0.6s; }
+.project-card:nth-child(3) { animation-delay: 0.9s; }
+
+/* Alternate background for sections with gradient variants */
+.section:nth-child(even) {
+  background: linear-gradient(120deg, #6c63ff, #ff6ec7);
+  color: white; /* make text visible on gradient */
+}
+
+.section:nth-child(odd) {
+  background: #f4f6fb;  /* soft neutral for balance */
+}
